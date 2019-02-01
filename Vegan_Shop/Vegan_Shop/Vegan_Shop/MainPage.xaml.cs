@@ -1,25 +1,40 @@
-﻿namespace Vegan_Shop
+﻿using Xamarin.Forms;
+using System;
+using System.Windows.Input;
+
+namespace Vegan_Shop
 {
-    public partial class MainPage : Xamarin.Forms.ContentPage, System.ComponentModel.INotifyPropertyChanged
+    public partial class MainPage : Xamarin.Forms.ContentPage
     {
-        public MainPage()
+        private IMainPageModel pageModel;
+
+        public MainPage( IMainPageModel inPageModel )
         {
             InitializeComponent();
+            pageModel = inPageModel;
+
+            //The SearchBar binding context is the controller
+            TopSearchBar.BindingContext = this;
+            //We are using an MVC pattern here, so the label's binding context is the model
+            MidLabel.BindingContext = pageModel;
+
+            pageModel.TextBox = "Default";
         }
-        public System.Windows.Input.ICommand WeirdOnSearch
+
+        private ICommand _onSearch;
+        public ICommand OnSearch
         {
             get
             {
-                return new Xamarin.Forms.Command<System.Object>((Sender) => {
-                    //OnSearch(Sender, null);
-                    coolLabel.Text = "Searched";
-                });
+                return _onSearch ?? (_onSearch = new Command<Object>((Sender) => {
+                    pageModel.TextBox = (String)Sender;
+                }));
             }
         }
 
-        void OnPress(System.Object Sender, System.EventArgs eventArgs)
+        public void OnPress(Object Sender, EventArgs eventArgs)
         {
-            coolLabel.Text = "yew";
+            pageModel.Count();
         }
     }
 }

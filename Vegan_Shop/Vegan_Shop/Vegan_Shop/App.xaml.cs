@@ -11,7 +11,7 @@ namespace Vegan_Shop
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MainPage( new MainPageModel() );
         }
 
         protected override void OnStart()

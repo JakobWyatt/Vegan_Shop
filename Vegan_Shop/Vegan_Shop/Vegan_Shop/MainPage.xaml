@@ -4,13 +4,14 @@
              xmlns:local="clr-namespace:Vegan_Shop"
              x:Class="Vegan_Shop.MainPage">
     <StackLayout>
-        <SearchBar x:Name = "Search"
-            BindingContext="{local:MainPage}"
-            Placeholder="Search Food"
-            SearchCommand = "{Binding WeirdOnSearch}" />
+        <SearchBar x:Name = "TopSearchBar"
+            Placeholder="Search Here"
+            SearchCommand = "{Binding OnSearch}"
+            SearchCommandParameter="{Binding Text, Source={x:Reference TopSearchBar}}"/>
         <Button Text="Click Me!"
                 Clicked="OnPress"/>
-        <Label x:Name = "coolLabel" Text="Hey" 
+        <Label x:Name = "MidLabel"
+           Text="{Binding TextBox}" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
     </StackLayout>
