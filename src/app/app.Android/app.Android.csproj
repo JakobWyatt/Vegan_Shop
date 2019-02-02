@@ -91,9 +91,9 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Vegan_Shop\Vegan_Shop.csproj">
-      <Project>{D231FA0E-2071-425D-855C-8FF49BBA3363}</Project>
-      <Name>Vegan_Shop</Name>
+    <ProjectReference Include="..\app\app.csproj">
+      <Project>{026AD7E7-E1E1-44A8-9687-F61892157E33}</Project>
+      <Name>app</Name>
     </ProjectReference>
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

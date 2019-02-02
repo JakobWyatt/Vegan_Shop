@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vegan_Shop.Android", "Vegan_Shop\Vegan_Shop.Android\Vegan_Shop.Android.csproj", "{6C06E76B-4DAB-4A70-8885-835CD40E4B80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.Android", "app\app.Android\app.Android.csproj", "{6C06E76B-4DAB-4A70-8885-835CD40E4B80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vegan_Shop.iOS", "Vegan_Shop\Vegan_Shop.iOS\Vegan_Shop.iOS.csproj", "{2958973D-5FE8-4DFA-BD8C-3519C9B9E0C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.iOS", "app\app.iOS\app.iOS.csproj", "{2958973D-5FE8-4DFA-BD8C-3519C9B9E0C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vegan_Shop", "Vegan_Shop\Vegan_Shop\Vegan_Shop.csproj", "{026AD7E7-E1E1-44A8-9687-F61892157E33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app", "app\app\app.csproj", "{026AD7E7-E1E1-44A8-9687-F61892157E33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
