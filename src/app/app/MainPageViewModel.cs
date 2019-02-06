@@ -1,11 +1,13 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace Vegan_Shop
 {
     //ViewModel implements IMainPageViewModel for view binding
-    public class MainPageViewModel : INotifyPropertyChanged
+    public class MainPageViewModel : IMainPageViewModel
     {
+        /*
         private String _textBox;
         public String TextBox
         {
@@ -22,6 +24,8 @@ namespace Vegan_Shop
                 }
             }
         }
+        */
+        public ObservableCollection<String> ItemList = new ObservableCollection<String>();
 
         public event PropertyChangedEventHandler PropertyChanged;
     }

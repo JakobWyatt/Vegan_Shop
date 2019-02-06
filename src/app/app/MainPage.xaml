@@ -5,8 +5,10 @@
              x:Class="Vegan_Shop.MainPage">
     <StackLayout>
         <SearchBar x:Name = "FoodSearchBar"
-            Placeholder="Search Food"
-            SearchCommand = "{Binding SearchFood}"
+            Placeholder=""
+            SearchCommand="{Binding SearchFood}"
             SearchCommandParameter="{Binding Text, Source={x:Reference FoodSearchBar}}"/>
+        <ListView x:Name="FoodList"
+                  ItemsSource="{Binding FoodList}"/>
     </StackLayout>
 </ContentPage>
