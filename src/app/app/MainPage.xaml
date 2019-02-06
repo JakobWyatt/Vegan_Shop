@@ -4,15 +4,9 @@
              xmlns:local="clr-namespace:Vegan_Shop"
              x:Class="Vegan_Shop.MainPage">
     <StackLayout>
-        <SearchBar x:Name = "TopSearchBar"
-            Placeholder="Search Here"
-            SearchCommand = "{Binding OnSearch}"
-            SearchCommandParameter="{Binding Text, Source={x:Reference TopSearchBar}}"/>
-        <Button Text="Click Me!"
-                Clicked="OnPress"/>
-        <Label x:Name = "MidLabel"
-           Text="{Binding TextBox}" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <SearchBar x:Name = "FoodSearchBar"
+            Placeholder="Search Food"
+            SearchCommand = "{Binding SearchFood}"
+            SearchCommandParameter="{Binding Text, Source={x:Reference FoodSearchBar}}"/>
     </StackLayout>
 </ContentPage>

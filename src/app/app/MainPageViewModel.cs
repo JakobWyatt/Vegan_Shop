@@ -3,7 +3,8 @@ using System.ComponentModel;
 
 namespace Vegan_Shop
 {
-    public class MainPageModel : IMainPageModel
+    //ViewModel implements IMainPageViewModel for view binding
+    public class MainPageViewModel : INotifyPropertyChanged
     {
         private String _textBox;
         public String TextBox
@@ -20,25 +21,6 @@ namespace Vegan_Shop
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TextBox"));
                 }
             }
-        }
-
-        private int _count = 0;
-        private int _Count
-        {
-            get
-            {
-                return _count;
-            }
-            set
-            {
-                _count = value;
-                TextBox = _count.ToString();
-            }
-        }
-
-        public void Count()
-        {
-            ++_Count;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
