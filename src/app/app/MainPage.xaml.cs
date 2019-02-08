@@ -13,7 +13,7 @@ namespace Vegan_Shop
         {
             InitializeComponent();
             viewModel = inViewModel;
-            this.BindingContext = viewModel;
+            BindingContext = viewModel;
         }
     }
 }
