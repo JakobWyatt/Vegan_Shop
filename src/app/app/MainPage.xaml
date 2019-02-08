@@ -9,6 +9,14 @@
             SearchCommand="{Binding SearchFood}"
             SearchCommandParameter="{Binding Text, Source={x:Reference FoodSearchBar}}"/>
         <ListView x:Name="FoodList"
-                  ItemsSource="{Binding FoodList}"/>
+                  ItemsSource="{Binding FoodList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Name}"
+                               Detail="{Binding Price}"
+                               ImageSource="{Binding Image}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 </ContentPage>
