@@ -7,6 +7,6 @@ namespace Vegan_Shop
     public interface IMainPageViewModel : INotifyPropertyChanged
     {
         ICommand SearchFood { get; }
-        ObservableCollection<Food> { get; }
+        ObservableCollection<Food> FoodList { get; }
     }
 }
