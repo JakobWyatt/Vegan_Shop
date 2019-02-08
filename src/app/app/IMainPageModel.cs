@@ -1,11 +1,10 @@
 ﻿using System;
-using System.ComponentModel;
+using System.Collections.Generic;
 
 namespace Vegan_Shop
 {
-    public interface IMainPageModel : INotifyPropertyChanged
+    public interface IMainPageModel
     {
-        String TextBox { get; set; }
-        void Count();
+        List<Food> queryFood(String query);
     }
 }
