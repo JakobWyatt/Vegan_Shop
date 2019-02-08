@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Vegan_Shop_Test;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Vegan_Shop
@@ -11,7 +12,7 @@ namespace Vegan_Shop
         {
             InitializeComponent();
 
-            MainPage = new MainPage( new MainPageViewModel() );
+            MainPage = new MainPage( new MainPageViewModel( new MainPageModelTest() ) );
         }
 
         protected override void OnStart()
