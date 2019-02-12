@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Vegan_Shop
 {
     public interface IMainPageModel
     {
-        List<Food> queryFood(String query);
+        Task<List<Food>> QueryFood(String query);
     }
 }
