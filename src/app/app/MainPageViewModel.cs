@@ -1,7 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace Vegan_Shop
@@ -23,14 +25,17 @@ namespace Vegan_Shop
             {
                 return _searchFood ?? (_searchFood = new Command( ( Object sender ) =>
                 {
-                    //Cannot reassign, as we would lose the binding to FoodList
-                    FoodList.Clear();
-                    mainPageModel.queryFood( sender.ToString() ).ForEach( FoodList.Add );
+                    //Query the foods from our model, then set the foodlist to these new foods.
+                    mainPageModel.QueryFood( sender.ToString() ).ContinueWith( (Task<List<Food>> foodQuery) =>
+                    {
+                        FoodList = new ObservableCollection<Food>(foodQuery.Result);
+                        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FoodList"));
+                    });
                 }));
             }
         }
 
-        public ObservableCollection<Food> FoodList { get; } = new ObservableCollection<Food>();
+        public ObservableCollection<Food> FoodList { get; private set; } = new ObservableCollection<Food>();
 
         public event PropertyChangedEventHandler PropertyChanged;
     }
