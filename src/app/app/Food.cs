@@ -1,30 +1,31 @@
 ﻿using System;
+using SQLite;
 using Xamarin.Forms;
 
 namespace Vegan_Shop
 {
+    [Table("Food")]
     public class Food
     {
-        public String Name
-        {
-            get;
-        }
+        [PrimaryKey]
+        public int _id { get; set; }
 
-        public Decimal Price
-        {
-            get;
-        }
+        public String Name { get; set; }
 
-        public ImageSource Image
-        {
-            get;
-        }
+        public Decimal Price { get; set; }
 
-        public Food(String name, Decimal price, ImageSource image)
+        [Ignore]
+        public ImageSource Image { get; set; }
+
+        public Food(int id, String name, Decimal price, ImageSource image)
         {
+            _id = id;
             Name = name;
             Price = price;
             Image = image;
         }
+
+        //required for SQLite Database
+        public Food() { }
     }
 }
