@@ -15,14 +15,18 @@ namespace Vegan_Shop
         public Decimal Price { get; set; }
 
         [Ignore]
-        public ImageSource Image { get; set; }
+        public ImageSource Image {
+            get
+            {
+                return ImageSource.FromFile( "image_" + _id.ToString() );
+            }
+        }
 
-        public Food(int id, String name, Decimal price, ImageSource image)
+        public Food(int id, String name, Decimal price)
         {
             _id = id;
             Name = name;
             Price = price;
-            Image = image;
         }
 
         //required for SQLite Database
