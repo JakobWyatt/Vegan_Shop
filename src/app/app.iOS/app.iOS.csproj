@@ -140,6 +140,12 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\milk.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\cheese.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\milk_and_cheese.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\milk_and_cheese.imageset\milkAndCheese.png" />
+    <ImageAsset Include="Assets.xcassets\cheese.imageset\cheese.png" />
+    <ImageAsset Include="Assets.xcassets\milk.imageset\milk.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -156,5 +162,10 @@
       <Project>{026AD7E7-E1E1-44A8-9687-F61892157E33}</Project>
       <Name>app</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\milk.imageset\" />
+    <Folder Include="Assets.xcassets\cheese.imageset\" />
+    <Folder Include="Assets.xcassets\milk_and_cheese.imageset\" />
   </ItemGroup>
 </Project>
