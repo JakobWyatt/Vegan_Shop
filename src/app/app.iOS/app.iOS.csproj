@@ -140,12 +140,12 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\milk.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\cheese.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\milk_and_cheese.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\milk_and_cheese.imageset\milkAndCheese.png" />
-    <ImageAsset Include="Assets.xcassets\cheese.imageset\cheese.png" />
-    <ImageAsset Include="Assets.xcassets\milk.imageset\milk.png" />
+    <ImageAsset Include="Assets.xcassets\image_2.imageset\cheese.png" />
+    <ImageAsset Include="Assets.xcassets\image_2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\image_3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\image_3.imageset\milk.png" />
+    <ImageAsset Include="Assets.xcassets\image_1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\image_1.imageset\milkAndCheese.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -164,8 +164,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets.xcassets\milk.imageset\" />
-    <Folder Include="Assets.xcassets\cheese.imageset\" />
-    <Folder Include="Assets.xcassets\milk_and_cheese.imageset\" />
+    <Folder Include="Assets.xcassets\image_2.imageset\" />
+    <Folder Include="Assets.xcassets\image_3.imageset\" />
+    <Folder Include="Assets.xcassets\image_1.imageset\" />
   </ItemGroup>
 </Project>
