@@ -4922,7 +4922,7 @@ namespace Vegan_Shop.Droid
 			public const int milk = 2130837773;
 			
 			// aapt resource value: 0x7f02010e
-			public const int milkAndCheese = 2130837774;
+			public const int milk_and_cheese = 2130837774;
 			
 			// aapt resource value: 0x7f02010f
 			public const int mr_button_connected_dark = 2130837775;

@@ -9,7 +9,7 @@ namespace Vegan_Shop
 {
     public partial class App : Application
     {
-        private FoodDatabaseTest FoodDatabase { get; set; } = new FoodDatabaseTest();
+        private FakeFoodDatabase FoodDatabase { get; set; } = new FakeFoodDatabase();
 
         public App()
         {

@@ -85,7 +85,7 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\drawable\milkAndCheese.png" />
+    <AndroidResource Include="Resources\drawable\milk_and_cheese.png" />
     <AndroidResource Include="Resources\drawable\milk.png" />
     <AndroidResource Include="Resources\drawable\cheese.png" />
   </ItemGroup>
